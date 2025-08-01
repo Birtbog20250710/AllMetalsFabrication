@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tier-1 ISO 9001 metal fabrication for automotive & medical OEMs. ≥90% on-time delivery, 24-hr quotes. Get your RFQ now.">
+    <meta name="keywords" content="ISO 9001 metal fabrication, tier-1 supplier, automotive OEM supplier, medical device manufacturing">
+    <title>ISO 9001 Metal Fabrication – Tier-1 Supplier | AMF</title>
+    
+    <!-- Preload critical CSS -->
+    <style>
+        /* Critical inline CSS for above-the-fold content */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #3730a3;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #4b5563; /* Darkened for WCAG AA compliance */
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --success-color: #10b981;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem;
+        }
+        
+        .nav-menu a:hover, .nav-menu a:focus {
+            color: var(--primary-color);
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+        
+        .nav-cta {
+            background: var(--accent-color);
+            color: white !important;
+            padding: 0.5rem 1.5rem !important;
+            border-radius: 6px;
+        }
+        
+        .nav-cta:hover {
+            background: #dc7f09;
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+        
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0 40px;
+            margin-top: 60px;
+            position: relative;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        .hero h1 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero-badges {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 24px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        
+        .badge svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--success-color);
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+        
+        /* Quote Form */
+        .quote-form {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .quote-form h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: var(--accent-color);
+            color: white;
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+        }
+        
+        .btn-primary:hover, .btn-primary:focus {
+            background: #dc7f09;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+            outline: 2px solid white;
+            outline-offset: 2px;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-header {
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            border-top-color: var(--accent-color);
+        }
+        
+        .benefit-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .benefit-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .benefit-card strong {
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+        
+        .highlight-metric {
+            display: inline-block;
+            background: #fef3c7;
+            color: var(--primary-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+        
+        /* Metrics Section */
+        .metrics {
+            background: var(--bg-light);
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .metric {
+            padding: 2rem;
+        }
+        
+        .metric-value {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-label {
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: var(--bg-white);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .alternative-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 2rem auto 0;
+        }
+        
+        .option-card {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .option-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+        
+        .option-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .option-card p {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background: var(--bg-light);
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .faq-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        /* Utility Classes */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .quote-form {
+                margin-top: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: var(--bg-white);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .hero {
+                padding: 80px 0 40px;
+            }
+            
+            .benefits-grid,
+            .metrics-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Focus styles */
+        a:focus, button:focus, input:focus, select:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main" class="sr-only">Skip to main content</a>
+    
+    <!-- Header Navigation -->
+    <header>
+        <nav class="container" role="navigation" aria-label="Main Navigation">
+            <div class="logo">AMF</div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#capabilities">Capabilities</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact" class="nav-cta">Get Quote</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div>
+                        <h1>ISO 9001 Metal Fabrication — 24-Hour Quotes for Tier-1 Automotive & Medical OEMs</h1>
+                        <div class="hero-badges">
+                            <span class="badge">
+                                <svg aria-hidden="true" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                ISO 9001:2015 Certified
+                            </span>
+                            <span class="badge">
+                                <svg aria-hidden="true" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                >90% On-Time Delivery
+                            </span>
+                            <span class="badge">
+                                <svg aria-hidden="true" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                24-Hour Quotes
+                            </span>
+                        </div>
+                        <p class="hero-description">
+                            <strong>All Metals Fabrication delivers zero-defect manufacturing</strong> for high-volume OEMs 
+                            in automotive, medical device, and industrial machinery sectors.
+                        </p>
+                        <p class="hero-description">
+                            With <strong>30+ years of proven excellence</strong> and our continuous improvement culture driving 
+                            <strong>1,600+ implemented process enhancements</strong>, we eliminate the communication chaos, 
+                            quality risks, and delivery delays that plague traditional fabrication partnerships.
+                        </p>
+                    </div>
+                    
+                    <!-- Quote Form -->
+                    <div class="quote-form">
+                        <h2>Get Your Quote in 24 Hours</h2>
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Work Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="volume">Annual Volume</label>
+                                <select id="volume" name="volume" required>
+                                    <option value="">Select volume range</option>
+                                    <option value="1000-10000">1,000 - 10,000 units</option>
+                                    <option value="10000-50000">10,000 - 50,000 units</option>
+                                    <option value="50000-100000">50,000 - 100,000 units</option>
+                                    <option value="100000+">100,000+ units</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Request Quote Now →</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Manufacturing Partnership Built on Proven Operational Excellence</h2>
+                    <p>Eliminate your biggest supplier headaches with AMF's industrial-grade solutions</p>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>Communication chaos ends here</h3>
+                        <p>
+                            <strong>AMF's direct-line approach</strong> eliminates the inefficient communication that plagues 
+                            <span class="highlight-metric">67%</span> of manufacturing partnerships.
+                        </p>
+                        <p>
+                            Your dedicated project manager provides real-time production updates, preventing the surprise 
+                            delays that force costly schedule adjustments.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Quality issues become history</h3>
+                        <p>
+                            Our <strong>ISO 9001:2015 certified quality management system</strong>, combined with rigorous 
+                            Six Sigma methodology, achieves defect rates below <span class="highlight-metric">3.4 PPM</span>.
+                        </p>
+                        <p>
+                            Multi-step verification catches issues before they impact your production line.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Delivery reliability you can bank on</h3>
+                        <p>
+                            <strong>Over <span class="highlight-metric">90%</span> on-time delivery performance</strong> 
+                            backed by lean manufacturing processes that eliminate waste and optimize production flow.
+                        </p>
+                        <p>
+                            Our JIT-compatible operations integrate seamlessly with your manufacturing schedule.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Quote response that matches your pace</h3>
+                        <p>
+                            While competitors take weeks, <strong>AMF delivers accurate quotes within 
+                            <span class="highlight-metric">24 hours</span></strong>.
+                        </p>
+                        <p>
+                            Our streamlined estimation process enables rapid, precise quotations that help you 
+                            respond faster to your customers' demands.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- American Manufacturing Section -->
+        <section class="section" style="background: var(--bg-light);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>American Manufacturing Advantage Drives Your Competitive Edge</h2>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>Supply chain resilience built in</h3>
+                        <p>
+                            <strong>Domestic production</strong> eliminates the global disruption risks that cost 
+                            manufacturers millions in delays and expediting fees.
+                        </p>
+                        <p>
+                            Complete visibility and control means no surprise shutdowns or quality issues from 
+                            overseas partners.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Quality control without compromise</h3>
+                        <p>
+                            Every manufacturing dollar generates <strong><span class="highlight-metric">$1.82</span> 
+                            in economic activity</strong> while maintaining American quality standards.
+                        </p>
+                        <p>
+                            Our proximity enables continuous feedback loops between your engineering team and our 
+                            production floor.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Speed to market advantage</h3>
+                        <p>
+                            <strong>Reduced transportation costs and lead times</strong>, combined with same-time-zone 
+                            communication, accelerate your product development cycles.
+                        </p>
+                        <p>
+                            When time-to-market determines competitive advantage, domestic manufacturing delivers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metrics Section -->
+        <section class="section metrics">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Continuous Improvement Culture Delivers Measurable Results</h2>
+                </div>
+                
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-value">2,400+</div>
+                        <div class="metric-label">Process Improvements Identified</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">1,600+</div>
+                        <div class="metric-label">Improvements Implemented</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">30%</div>
+                        <div class="metric-label">Lead Time Reduction</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">18%</div>
+                        <div class="metric-label">COGS Reduction</div>
+                    </div>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>Lean manufacturing methodology</h3>
+                        <p>
+                            Eliminates the <span class="highlight-metric">60%</span> waste typical in traditional 
+                            manufacturing, reducing your component costs while improving consistency.
+                        </p>
+                        <p>
+                            Our cellular manufacturing approach delivers <span class="highlight-metric">20-30%</span> 
+                            lead time reductions.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Data-driven quality assurance</h3>
+                        <p>
+                            Statistical process control and real-time monitoring catch variations before they become defects.
+                        </p>
+                        <p>
+                            This systematic approach has helped partners reduce COGS by up to 
+                            <span class="highlight-metric">18%</span> while maintaining zero-defect standards.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Workforce expertise and stability</h3>
+                        <p>
+                            Average employee tenure exceeding <span class="highlight-metric">15 years</span> ensures 
+                            consistent execution and institutional knowledge.
+                        </p>
+                        <p>
+                            Comprehensive training systems maintain manufacturing excellence across all shifts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capabilities Section -->
+        <section id="capabilities" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Certifications and Capabilities That Matter</h2>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h3>ISO 9001:2015 Certification</h3>
+                        <p>
+                            Third-party verification of our quality management systems ensures rigorous standards 
+                            apply at every production stage.
+                        </p>
+                        <p>
+                            Annual audits confirm ongoing compliance and continuous improvement implementation.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Advanced manufacturing equipment</h3>
+                        <p>
+                            State-of-the-art CNC machining centers, automated welding systems, and precision 
+                            measuring equipment support tight tolerance requirements.
+                        </p>
+                        <p>
+                            All optimized for high-volume production runs with consistent quality.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Industry-specific expertise</h3>
+                        <p>
+                            Serving automotive OEMs, medical device manufacturers, and industrial machinery 
+                            companies with deep regulatory understanding.
+                        </p>
+                        <p>
+                            We speak your language and understand your compliance requirements.
+                        </p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h3>Comprehensive capabilities</h3>
+                        <p>
+                            Precision machining, fabrication, welding, assembly, and finishing operations 
+                            under one roof.
+                        </p>
+                        <p>
+                            Reduce supplier complexity while maintaining quality consistency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Trusted by Industry Leaders</h2>
+                </div>
+                
+                <div class="testimonial-grid">
+                    <div class="testimonial">
+                        <p class="testimonial-text">
+                            "AMF's continuous improvement culture helped us reduce component costs by 22% while 
+                            improving delivery reliability. Their 24-hour quote response gives us the agility 
+                            our customers demand."
+                        </p>
+                        <p class="testimonial-author">— Operations Director, Tier-1 Automotive Supplier</p>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <p class="testimonial-text">
+                            "Zero defects across 500,000+ units produced. AMF's quality systems integrate 
+                            perfectly with our FDA compliance requirements."
+                        </p>
+                        <p class="testimonial-author">— VP Manufacturing, Medical Device Company</p>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <p class="testimonial-text">
+                            "The communication transparency and delivery reliability from AMF eliminated our 
+                            biggest supply chain headache. Real manufacturing partnership."
+                        </p>
+                        <p class="testimonial-author">— Plant Manager, Industrial Machinery Manufacturer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What is your average lead time for high-volume orders?</h3>
+                    <p>Our standard lead time is 4-6 weeks for initial production runs, with expedited options available. 
+                    Repeat orders typically ship in 2-3 weeks thanks to our lean manufacturing processes and dedicated 
+                    production cells for high-volume partners.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you offer design for manufacturability (DFM) support?</h3>
+                    <p>Yes, our engineering team provides complimentary DFM analysis for all high-volume projects. 
+                    We'll identify cost reduction opportunities and suggest design optimizations that maintain 
+                    quality while improving manufacturability.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What materials can you work with?</h3>
+                    <p>We specialize in aluminum, stainless steel, carbon steel, and various alloys. Our expertise 
+                    includes both standard and exotic materials required for automotive and medical applications, 
+                    with full material certification and traceability.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How do you ensure quality for critical components?</h3>
+                    <p>Our ISO 9001:2015 certified quality system includes first article inspection, in-process 
+                    verification, and final inspection with CMM validation. We maintain full documentation and 
+                    provide PPAP packages for automotive customers.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="section cta">
+            <div class="container">
+                <h2>Start Your Partnership with AMF Today</h2>
+                <p>Get your accurate quote in 24 hours and discover why tier-1 suppliers choose AMF 
+                for their most critical manufacturing needs.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary" style="width: auto; padding: 14px 40px;">REQUEST QUOTE NOW →</a>
+                </div>
+                
+                <div class="alternative-options">
+                    <div class="option-card">
+                        <a href="#">Schedule Virtual Facility Tour</a>
+                        <p>See our quality processes and manufacturing capabilities</p>
+                    </div>
+                    <div class="option-card">
+                        <a href="#">Download Capability Assessment</a>
+                        <p>Complete technical specifications and certifications</p>
+                    </div>
+                    <div class="option-card">
+                        <a href="#">Connect with Our Engineering Team</a>
+                        <p>Discuss technical requirements and design optimization</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem; font-size: 1.2rem;">
+                    <p>Call us directly: <strong>(555) 123-4567</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>30+ years of manufacturing excellence | ISO 9001:2015 Certified | American Manufacturing Advantage</p>
+            <p style="margin-top: 1rem; opacity: 0.8;">© 2025 All Metals Fabrication. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Schema.org FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "What is your average lead time for high-volume orders?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our standard lead time is 4-6 weeks for initial production runs, with expedited options available. Repeat orders typically ship in 2-3 weeks thanks to our lean manufacturing processes and dedicated production cells for high-volume partners."
+            }
+        }, {
+            "@type": "Question",
+            "name": "Do you offer design for manufacturability (DFM) support?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, our engineering team provides complimentary DFM analysis for all high-volume projects. We'll identify cost reduction opportunities and suggest design optimizations that maintain quality while improving manufacturability."
+            }
+        }, {
+            "@type": "Question",
+            "name": "What materials can you work with?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We specialize in aluminum, stainless steel, carbon steel, and various alloys. Our expertise includes both standard and exotic materials required for automotive and medical applications, with full material certification and traceability."
+            }
+        }, {
+            "@type": "Question",
+            "name": "How do you ensure quality for critical components?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our ISO 9001:2015 certified quality system includes first article inspection, in-process verification, and final inspection with CMM validation. We maintain full documentation and provide PPAP packages for automotive customers."
+            }
+        }]
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "All Metals Fabrication",
+        "alternateName": "AMF",
+        "url": "https://www.amfab.com",
+        "telephone": "+1-555-123-4567",
+        "description": "ISO 9001:2015 certified metal fabrication for tier-1 automotive and medical device OEMs",
+        "areaServed": "US",
+        "award": "ISO 9001:2015 Certified"
+    }
+    </script>
+
+    <script>
+        // Mobile menu toggle with accessibility
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        let menuOpen = false;
+        
+        mobileMenuToggle.addEventListener('click', function() {
+            menuOpen = !menuOpen;
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.setAttribute('aria-expanded', menuOpen);
+            
+            // Trap focus when menu is open
+            if (menuOpen) {
+                navMenu.querySelector('a').focus();
+            }
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (menuOpen && !navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                menuOpen = false;
+                navMenu.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (menuOpen) {
+                        menuOpen = false;
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+        });
+        
+        // Debounced scroll effect for header
+        let ticking = false;
+        function updateHeaderShadow() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+            ticking = false;
+        }
+        
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(updateHeaderShadow);
+                ticking = true;
+            }
+        });
+        
+        // Form submission (placeholder - replace with actual handler)
+        document.querySelector('.quote-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your quote request! We\'ll respond within 24 hours.');
+        });
+    </script>
+</body>
+</html>
