@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Robotic Welding | Low-Volume, High-Mix | All Metals Fabrication</title>
+  <meta name="description" content="AMF robotic welding delivers production-grade quality for low-volume batches and high-mix parts. 4× faster, 10-minute programming, ISO 9001:2015. Get your free automation assessment."/>
+  <!-- Typography tuned to AMF feel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* AMF-style palette (from site & logo) */
+      --amf-navy:#1f3d91;         /* primary */
+      --amf-navy-2:#102a62;       /* dark hover */
+      --amf-orange:#f59e0b;       /* accent */
+      --ink:#0c1222;
+      --muted:#6b7280;
+      --border:#e7eaf3;
+      --bg:#ffffff;
+      --card:#fafbff;
+      --focus:#84c5ff;
+      --shadow:0 10px 26px rgba(16,24,40,.08);
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+    h1,h2,h3{font-family:Montserrat,Inter,system-ui,sans-serif;letter-spacing:.01em}
+    h1{font-weight:800;text-transform:none}
+    h2{font-weight:800}
+    a{color:var(--amf-navy);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:auto;padding:0 20px}
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:20}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+    .logo{display:flex;gap:12px;align-items:center;font-family:Montserrat,sans-serif;font-weight:800;color:#111;letter-spacing:.04em}
+    .logo img{height:34px}
+    .iso{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--border);border-radius:999px;padding:6px 10px;background:#fff;font-size:12px}
+    .iso img{height:20px}
+
+    /* Hero */
+    .hero{padding:46px 0 26px}
+    .eyebrow{display:inline-block;color:var(--amf-orange);font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+    h1{font-size:clamp(28px,5vw,44px);line-height:1.1;margin:.35em 0 .25em}
+    .sub{font-size:clamp(16px,2.6vw,20px);color:var(--muted);max-width:760px}
+    .heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;margin-top:24px}
+    .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:8px}
+    .stat{border:1px dashed var(--border);border-radius:12px;padding:12px 12px;background:#fff}
+    .stat b{font-size:20px}
+    .heroImg{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border)}
+    .heroImg img{width:100%;height:auto;display:block}
+
+    /* Buttons styled to AMF (navy primary, orange accent) */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:none;border-radius:12px;padding:13px 18px;font-weight:800;cursor:pointer}
+    .btn-primary{background:var(--amf-navy);color:#fff}
+    .btn-primary:hover{background:var(--amf-navy-2)}
+    .btn-accent{background:linear-gradient(180deg,var(--amf-orange),#e78e07);color:#111827}
+    .note{font-size:12px;color:var(--muted)}
+
+    section{padding:40px 0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+    .kicker{padding:14px 16px;border:1px solid var(--border);border-radius:12px;background:#fff}
+    .pill{display:inline-block;background:rgba(245,158,11,.14);color:var(--amf-orange);font-weight:800;border-radius:999px;padding:6px 12px;font-size:12px;margin-bottom:8px}
+    .li{display:flex;gap:10px;align-items:flex-start}
+    .li svg{flex:0 0 18px;margin-top:2px}
+
+    /* Form */
+    form{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    label{display:block;font-weight:600;margin:12px 0 6px}
+    input,select,textarea{width:100%;border:1px solid var(--border);border-radius:10px;padding:12px;font:inherit}
+    input:focus,select:focus,textarea:focus{outline:3px solid var(--focus)}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .gallery img{width:100%;height:100%;object-fit:cover;border-radius:10px;border:1px solid var(--border)}
+    .gallery figure{margin:0;aspect-ratio:16/10;overflow:hidden}
+
+    /* FAQ */
+    .faq{border-top:1px solid var(--border)}
+    details{border-bottom:1px solid var(--border);padding:16px 0}
+    summary{cursor:pointer;font-weight:600}
+
+    footer{border-top:1px solid var(--border);padding:22px 0;color:var(--muted)}
+    @media (max-width:960px){
+      .heroGrid,.grid-3,.grid-2,.row,.gallery{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr 1fr 1fr}
+    }
+    @media (max-width:560px){.stats{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="https://www.allmetalsfab.com" aria-label="All Metals Fabrication">
+        <!-- Swap for your hosted logo -->
+        <img src="https://www.allmetalsfab.com/wp-content/uploads/logo-1.png" alt="AMF Logo">
+        <span>ALL METALS FABRICATION</span>
+      </a>
+      <span class="iso" aria-label="ISO 9001:2015 Certified">
+        <img src="https://www.allmetalsfab.com/wp-content/uploads/ISO.png" alt="ISO 9001:2015"> ISO 9001:2015
+      </span>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow">Robotic Welding at AMF</span>
+        <h1>Low-Volume Batches. High-Mix Parts. <span style="color:var(--amf-navy)">Zero Compromise.</span></h1>
+        <p class="sub">Get production-grade weld quality for short runs without big-factory overhead. Our hand-guided cobot cells deliver <strong>4× faster production</strong>, <strong>10-minute programming</strong>, and are <strong>small-batch ready (30–50 pcs)</strong>—ideal for job shops and OEMs moving quickly.</p>
+
+        <div class="heroGrid">
+          <div class="card">
+            <div class="stats">
+              <div class="stat"><b>90%+ On-Time</b><br><span class="note">Delivery performance</span></div>
+              <div class="stat"><b>1–3 Day</b><br><span class="note">Quote turnaround</span></div>
+              <div class="stat"><b>30+ Years</b><br><span class="note">Fabrication excellence</span></div>
+            </div>
+            <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+              <a class="btn btn-accent" href="#quote">Get My Free Automation Assessment</a>
+              <a class="btn btn-primary" href="tel:+18013175647">Call (801) 317-5647</a>
+            </div>
+            <p class="note" style="margin-top:10px">Prefer email? <a href="mailto:sales@allmetalsfab.com">sales@allmetalsfab.com</a></p>
+          </div>
+
+          <!-- HERO IMAGE (use one of your supplied photos) -->
+          <div class="heroImg">
+            <!-- Replace src with your hosted path. Provided filename: 3ae62870-66db-4194-b998-8e42e49745e2.png -->
+            <img src="https://www.allmetalsfab.com/wp-content/uploads/cobot-welder-tacking-at-IMS.webp"
+     alt="Cobalt Welder Tacking at IMS"
+     width="800"
+     height="533"
+     loading="lazy">
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY AMF -->
+    <section>
+      <div class="wrap">
+        <h2>Why Robotic Welding at AMF?</h2>
+        <div class="grid-3">
+          <div class="kicker">
+            <span class="pill">4× Faster Production</span>
+            <div class="li">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Consistent weld speeds near <b>~90 inches/minute</b> for repeatable throughput.</span>
+            </div>
+          </div>
+          <div class="kicker">
+            <span class="pill">10-Minute Programming</span>
+            <div class="li">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Hand-guide teaching—<b>no code</b>, fast changeovers, ideal for high-mix parts.</span>
+            </div>
+          </div>
+          <div class="kicker">
+            <span class="pill">Small-Batch Ready</span>
+            <div class="li">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Efficient for lots as small as <b>30–50 pieces</b> with high weld quality.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section>
+      <div class="wrap">
+        <h2>Full Fabrication, One Partner</h2>
+        <p class="sub" style="margin:0 0 14px">From cut to coat to crate—AMF delivers parts ready for your line.</p>
+        <div class="grid-3">
+          <div class="kicker"><b>Sheet Metal Laser Cutting</b><br><span class="note">Clean edges, tight tolerances.</span></div>
+          <div class="kicker"><b>Tube Laser Processing</b><br><span class="note">Accurate tube profiles & miters.</span></div>
+          <div class="kicker"><b>CNC Press Brake Forming</b><br><span class="note">Repeatable bends for high-mix SKUs.</span></div>
+          <div class="kicker"><b>Robotic Welding (NEW!)</b><br><span class="note">Cobot cells tuned for short runs.</span></div>
+          <div class="kicker"><b>Complex Assemblies</b><br><span class="note">Hardware, finishing, and kitting.</span></div>
+          <div class="kicker"><b>Custom Metal Solutions</b><br><span class="note">ISO-driven quality throughout.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY — using your five images -->
+    <section>
+      <div class="wrap">
+        <h2>Robotic Welding — In Action</h2>
+        <div class="gallery">
+          <!-- Replace src with your hosted paths; filenames kept for mapping -->
+          <figure><img src="https://www.allmetalsfab.com/wp-content/uploads/welding-cobot-in-action-hirebotics.webp" alt="Cobot welding table — wide view"></figure>
+          <figure><img src="https://www.allmetalsfab.com/wp-content/uploads/Athena-manufacturing-welding-cobots-in-action-scaled.webp" alt="Cobot welding with sparks — close"></figure>
+          <figure><img src="https://www.allmetalsfab.com/wp-content/uploads/cobot-welder-beacon-advanta-1.png" alt="cobot-welder-beacon-advanta"></figure>
+          <figure><img src="https://www.allmetalsfab.com/wp-content/uploads/cobot-welder-with-welder-productivity-increase-1-scaled.webp" alt="cobot-welder-with-welder-productivity-increase"></figure>
+          <figure><img src="https://www.allmetalsfab.com/wp-content/uploads/cobot-welder-tacking-at-IMS-1.webp" alt="cobot-welder-tacking-at-IMS"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section>
+      <div class="wrap">
+        <h2>How It Works</h2>
+        <div class="grid-2">
+          <div class="kicker"><b>1) Share Your Print</b><br><span class="note">Upload drawings or STEP files for a quick robotic weld review.</span></div>
+          <div class="kicker"><b>2) Quick Quote</b><br><span class="note">Most quotes turned in <b>1–3 days</b>, with DFM notes when helpful.</span></div>
+          <div class="kicker"><b>3) Pilot Run</b><br><span class="note">We set tooling, program in minutes, and validate first-article quality.</span></div>
+          <div class="kicker"><b>4) Scale Confidently</b><br><span class="note">Lock in repeatability for ongoing low-volume, high-mix orders.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA + FORM -->
+    <section id="quote" aria-label="Request your free automation assessment">
+      <div class="wrap grid-2">
+        <div>
+          <h2>Free Automation Assessment</h2>
+          <p class="sub">Send your drawing for a quick robotic welding analysis—see if your part is a fit and how much time we can save.</p>
+          <ul style="margin:16px 0 0;list-style:none;padding:0">
+            <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Designed for <b>low-volume</b>, <b>high-mix</b> production</span></li>
+            <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>ISO 9001:2015</b> quality system</span></li>
+            <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Weld speeds to ~90 ipm</b> with repeatability</span></li>
+          </ul>
+          <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="mailto:sales@allmetalsfab.com">Email Drawings</a>
+            <a class="btn btn-accent" href="tel:+18013175647">Talk to Sales</a>
+          </div>
+        </div>
+
+        <form id="leadForm" method="post" action="/forms/robotic-welding" enctype="multipart/form-data" novalidate>
+          <input type="hidden" id="sourceField" name="source" value="">
+          <div class="row">
+            <div>
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" placeholder="Jane Smith" required>
+            </div>
+            <div>
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" placeholder="Your company" required>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="email">Work Email</label>
+              <input id="email" name="email" type="email" placeholder="you@company.com" required>
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="(###) ###-####">
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="qty">Lot Size</label>
+              <select id="qty" name="qty">
+                <option value="">Select</option>
+                <option>30–50 pcs</option><option>51–200 pcs</option><option>201–500 pcs</option><option>500+ pcs</option>
+              </select>
+            </div>
+            <div>
+              <label for="material">Material</label>
+              <select id="material" name="material">
+                <option value="">Select</option>
+                <option>Carbon Steel</option><option>Stainless</option><option>Aluminum</option><option>Other</option>
+              </select>
+            </div>
+          </div>
+          <label for="notes">Project Notes (optional)</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Part name, thickness, weld type, timeline…"></textarea>
+
+          <label for="files">Upload Drawings / STEP / PDF</label>
+          <input id="files" name="files" type="file" multiple accept=".pdf,.step,.stp,.igs,.iges,.dxf,.dwg,.zip,.png,.jpg">
+
+          <div style="margin:14px 0">
+            <label style="display:flex;gap:8px;align-items:flex-start;font-weight:500">
+              <input type="checkbox" id="consent" required style="width:auto;margin-top:4px">
+              <span>I agree to be contacted about this request and AMF services.</span>
+            </label>
+          </div>
+
+          <button class="btn btn-accent" type="submit">Request Assessment</button>
+          <p class="note">Or email <a href="mailto:sales@allmetalsfab.com">sales@allmetalsfab.com</a> with your prints.</p>
+          <p class="note" id="formMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="wrap">
+        <h2>FAQ</h2>
+        <details>
+          <summary>What part sizes are ideal?</summary>
+          <div class="note">Most small-to-mid sized weldments that can be hand-guided and fixtured quickly. Share your print and we’ll confirm fit and fixturing approach.</div>
+        </details>
+        <details>
+          <summary>How do you handle high-mix changeovers?</summary>
+          <div class="note">Cobot cells with teach-by-hand programming (<b>~10 minutes</b> typical) plus modular fixtures—so swapping SKUs is fast without sacrificing quality.</div>
+        </details>
+        <details>
+          <summary>Do you certify welds?</summary>
+          <div class="note">Yes. AMF operates under an <b>ISO 9001:2015</b> quality management system with documented WPS/WPQR as required by the project.</div>
+        </details>
+        <details>
+          <summary>Lead times?</summary>
+          <div class="note">Quotes in <b>1–3 days</b>. Pilot runs scheduled quickly; production releases based on material/fixture readiness.</div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div>© <span id="yr"></span> All Metals Fabrication</div>
+        <div>
+          <a href="tel:+18013175647">(801) 317-5647</a> ·
+          <a href="mailto:sales@allmetalsfab.com">sales@allmetalsfab.com</a> ·
+          <a href="https://www.allmetalsfab.com">allmetalsfab.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FAQ schema for SEO -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What part sizes are ideal?","acceptedAnswer":{"@type":"Answer","text":"Most small-to-mid sized weldments that can be hand-guided and fixtured quickly. Share your print and we’ll confirm fit and fixturing approach."}},
+    {"@type":"Question","name":"How do you handle high-mix changeovers?","acceptedAnswer":{"@type":"Answer","text":"Cobot cells with teach-by-hand programming (~10 minutes typical) plus modular fixtures—so swapping SKUs is fast without sacrificing quality."}},
+    {"@type":"Question","name":"Do you certify welds?","acceptedAnswer":{"@type":"Answer","text":"Yes. AMF operates under an ISO 9001:2015 quality management system with documented WPS/WPQR as required by the project."}},
+    {"@type":"Question","name":"Lead times?","acceptedAnswer":{"@type":"Answer","text":"Quotes in 1–3 days. Pilot runs scheduled quickly; production releases based on material/fixture readiness."}}
+  ]}
+  </script>
+
+  <script>
+    // Year + capture source (email/postcard/utm)
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    const params = new URLSearchParams(location.search);
+    const from = params.get('source') || params.get('utm_source') || params.get('utm_campaign') || '';
+    const sourceField = document.getElementById('sourceField');
+    if(sourceField) sourceField.value = from;
+
+    // Microcopy tweak for source
+    const eyebrow = document.querySelector('.eyebrow');
+    if (from.toLowerCase().includes('postcard')) eyebrow.textContent = 'Thanks for scanning the postcard';
+    if (from.toLowerCase().includes('email')) eyebrow.textContent = 'Thanks for reading our email';
+
+    // Light client-side validation demo; remove preventDefault() when you wire to backend/CRM
+    const form = document.getElementById('leadForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault(); // remove to submit to your endpoint
+      const msg = document.getElementById('formMsg');
+      if(!form.checkValidity()){
+        msg.textContent = 'Please complete the required fields.';
+        msg.style.color = '#b42318';
+        return;
+      }
+      msg.textContent = 'Thanks! Your request has been received.';
+      msg.style.color = '#1b9e5a';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
