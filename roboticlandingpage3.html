@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Slash Weld Time & Boost ROI | Robotic Welding for High-Mix Parts | AMF</title>
+  <meta name="description" content="AMF's robotic welding cuts production time by 50% for high-mix, low-volume parts. Get perfect quality with 10-minute changeovers. Calculate your ROI and get a free automation assessment today."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Core Branding from Page 1 */
+      --amf-navy: #1f3d91;
+      --amf-navy-dark: #102a62;
+      --amf-orange: #f59e0b;
+      --amf-orange-dark: #dc8806;
+      --ink: #0c1222;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+      --bg-light: #f8fafc;
+      --success: #10b981;
+
+      /* Modern Touches from Page 2 */
+      --shadow: 0 10px 26px rgba(16, 24, 40, .08);
+      --radius: 14px;
+    }
+
+    /* --- Base & Typography --- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--ink);
+      line-height: 1.6;
+      background: var(--bg);
+      overflow-x: hidden;
+    }
+    h1, h2, h3 { font-family: 'Montserrat', sans-serif; line-height: 1.2; letter-spacing: .01em; }
+    h1 { font-weight: 900; font-size: clamp(32px, 5vw, 52px); background: linear-gradient(135deg, var(--amf-navy), var(--amf-navy-dark)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    h2 { font-weight: 800; font-size: clamp(28px, 4vw, 42px); color: var(--amf-navy); }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 80px 0; }
+    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-header p { font-size: 18px; color: var(--muted); max-width: 700px; margin: 16px auto 0; }
+    
+    /* --- Animations --- */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .fade-in { animation: fadeInUp 0.8s ease-out forwards; }
+
+    /* --- Header --- */
+    header {
+      position: sticky; top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      transition: box-shadow 0.3s ease;
+    }
+    .nav { height: 74px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); font-family: 'Montserrat', sans-serif; font-weight: 800; }
+    .logo img { height: 34px; }
+    .nav-right { display: flex; align-items: center; gap: 20px; }
+    .iso-badge { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; font-size: 12px; font-weight: 600; }
+    .iso-badge img { height: 20px; }
+    .phone-cta { display: flex; align-items: center; gap: 8px; padding: 10px 20px; background: var(--amf-navy); color: white; border-radius: 25px; text-decoration: none; font-weight: 700; transition: background 0.3s ease; }
+    .phone-cta:hover { background: var(--amf-navy-dark); }
+    
+    /* --- Hero Section --- */
+    .hero { padding: 60px 0; background: linear-gradient(180deg, rgba(31,61,145,0.03) 0%, rgba(245,158,11,0.02) 100%); }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+    .hero-subtitle { font-size: clamp(16px, 2.6vw, 20px); color: var(--muted); max-width: 550px; margin: 20px 0 30px; }
+    .trust-indicators { display: flex; gap: 24px; margin-bottom: 30px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+    .trust-item svg { color: var(--success); }
+    .hero-img-container { position: relative; }
+    .hero-img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); }
+    .stats-overlay { position: absolute; bottom: -20px; left: 20px; right: 20px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: var(--radius); padding: 16px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; border: 1px solid var(--border); text-align: center; }
+    .stat-number { font-size: 24px; font-weight: 800; color: var(--amf-navy); }
+    .stat-label { font-size: 12px; color: var(--muted); }
+    .cta-group { display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: none; border-radius: 12px; padding: 14px 24px; font-weight: 800; cursor: pointer; text-decoration: none; font-size: 16px; transition: all 0.3s ease; }
+    .btn-accent { background: linear-gradient(180deg, var(--amf-orange), var(--amf-orange-dark)); color: white; box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3); }
+    .btn-accent:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(245, 158, 11, 0.4); }
+    .btn-secondary { background: white; color: var(--amf-navy); border: 2px solid var(--amf-navy); }
+    .btn-secondary:hover { background: var(--amf-navy); color: white; }
+
+    /* --- Pain Points Section --- */
+    .pain-points { background: var(--bg-light); }
+    .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .pain-card { background: white; padding: 24px; border-radius: var(--radius); display: flex; gap: 16px; align-items: flex-start; border: 1px solid var(--border); transition: all 0.3s ease; }
+    .pain-card:hover { border-color: var(--amf-orange); transform: translateY(-5px); box-shadow: var(--shadow); }
+    .pain-icon { flex-shrink: 0; width: 44px; height: 44px; background: rgba(239, 68, 68, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #dc2626; }
+    .pain-card h3 { font-size: 18px; margin-bottom: 8px; }
+
+    /* --- ROI Calculator --- */
+    .roi-calculator { background: linear-gradient(135deg, var(--amf-navy), var(--amf-navy-dark)); color: white; }
+    .roi-calculator h2 { color: white; }
+    .calculator-container { max-width: 900px; margin: 0 auto; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.2); }
+    .calculator-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .slider-group { margin-bottom: 30px; }
+    .slider-label { display: flex; justify-content: space-between; margin-bottom: 12px; font-weight: 600; }
+    .slider { width: 100%; -webkit-appearance: none; height: 6px; background: rgba(255, 255, 255, 0.2); border-radius: 3px; outline: none; }
+    .slider::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--amf-orange); cursor: pointer; }
+    .roi-results { background: rgba(0, 0, 0, 0.2); border-radius: 16px; padding: 30px; text-align: center; }
+    .savings-amount { font-size: clamp(36px, 6vw, 48px); font-weight: 900; color: var(--amf-orange); margin: 10px 0; }
+
+    /* --- Benefits / Why AMF --- */
+    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .benefit-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 30px; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; }
+    .benefit-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .benefit-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--amf-orange); transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left; }
+    .benefit-card:hover::before { transform: scaleX(1); }
+    .benefit-icon { font-size: 32px; line-height: 1; margin-bottom: 16px; }
+    .benefit-card h3 { font-size: 20px; color: var(--amf-navy); margin-bottom: 12px; }
+
+    /* --- Testimonials --- */
+    .testimonials { background: var(--bg-light); overflow: hidden; }
+    .ticker-wrapper { position: relative; max-width: 100%; margin: 0 auto; }
+    .ticker { display: flex; gap: 30px; animation: scroll 40s linear infinite; }
+    .testimonial-card { flex-shrink: 0; width: 400px; background: white; padding: 30px; border-radius: var(--radius); border: 1px solid var(--border); }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; margin-top: 20px; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--amf-navy); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+    .author-name { font-weight: 700; }
+    .author-company { font-size: 14px; color: var(--muted); }
+
+    /* --- Form Section --- */
+    .form-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 50px; align-items: start; }
+    .form-benefits { list-style: none; margin: 30px 0; }
+    .form-benefits li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+    .form-benefits svg { flex-shrink: 0; color: var(--success); margin-top: 4px; }
+    .form-wrapper { background: white; border-radius: 20px; padding: 40px; box-shadow: var(--shadow); border: 1px solid var(--border); }
+    .progress-bar { display: flex; justify-content: space-between; margin-bottom: 30px; position: relative; }
+    .progress-bar::before { content: ''; position: absolute; top: 15px; left: 0; right: 0; height: 2px; background: var(--border); z-index: 0; }
+    .progress-line { position: absolute; top: 15px; left: 0; height: 2px; background: var(--amf-orange); z-index: 1; width: 0; transition: width 0.4s ease; }
+    .progress-step { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; flex: 1; }
+    .step-circle { width: 30px; height: 30px; border-radius: 50%; background: white; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 8px; transition: all 0.3s ease; }
+    .step-circle.active { background: var(--amf-orange); border-color: var(--amf-orange); color: white; }
+    .step-label { font-size: 12px; color: var(--muted); }
+    .form-step { display: none; }
+    .form-step.active { display: block; animation: fadeInUp 0.5s ease-out; }
+    .form-group { margin-bottom: 20px; }
+    label { display: block; font-weight: 600; margin-bottom: 8px; }
+    input, select, textarea { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 10px; font: inherit; transition: all 0.3s ease; }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--amf-orange); box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-navigation { display: flex; justify-content: space-between; margin-top: 30px; }
+
+    /* --- FAQ --- */
+    .faq { border-top: 1px solid var(--border); padding-top: 80px; }
+    details { border-bottom: 1px solid var(--border); padding: 18px 0; }
+    summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; font-size: 24px; color: var(--amf-navy); transition: transform 0.2s; }
+    details[open] summary::after { transform: rotate(45deg); }
+    .faq-answer { margin-top: 10px; color: var(--muted); }
+
+    /* --- Footer --- */
+    footer { padding: 60px 0 30px; background: var(--amf-navy); color: white; }
+    .footer-bottom { padding-top: 30px; margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; opacity: 0.7; font-size: 14px; }
+    
+    /* --- Responsive --- */
+    @media (max-width: 960px) {
+      .hero-grid, .calculator-grid, .form-grid { grid-template-columns: 1fr; }
+      .hero-grid { text-align: center; }
+      .hero-subtitle { margin: 20px auto 30px; }
+      .trust-indicators, .cta-group { justify-content: center; }
+      .hero-img-container { margin-top: 60px; }
+      .nav-right { display: none; }
+    }
+    @media (max-width: 560px) {
+      .stats-overlay, .form-row { grid-template-columns: 1fr; }
+      .stats-overlay { gap: 16px; }
+      h1 { font-size: 28px; }
+      h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap nav">
+      <a href="#" class="logo">
+        <img src="https://www.allmetalsfab.com/wp-content/uploads/logo-1.png" alt="AMF Logo">
+        <span>ALL METALS FABRICATION</span>
+      </a>
+      <div class="nav-right">
+        <div class="iso-badge">
+          <img src="https://www.allmetalsfab.com/wp-content/uploads/ISO.png" alt="ISO 9001:2015">
+          <span>ISO 9001:2015 Certified</span>
+        </div>
+        <a href="tel:+18013175647" class="phone-cta">(801) 317-5647</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-left fade-in">
+            <h1>Cut Production Time by 50% with Robotic Welding</h1>
+            <p class="hero-subtitle">The perfect solution for high-mix, low-volume parts. Get production-grade quality, 4x faster throughput, and 10-minute changeovers without big-factory overhead.</p>
+            <div class="trust-indicators">
+              <div class="trust-item"><svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><span>Perfect Repeatability</span></div>
+              <div class="trust-item"><svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><span>ISO 9001:2015 Quality</span></div>
+            </div>
+            <div class="cta-group">
+              <a href="#form" class="btn btn-accent">Get My Free Assessment</a>
+              <a href="#calculator" class="btn btn-secondary">Calculate My Savings</a>
+            </div>
+          </div>
+          <div class="hero-right fade-in" style="animation-delay: 0.2s;">
+            <div class="hero-img-container">
+              <img src="https://www.allmetalsfab.com/wp-content/uploads/cobot-welder-tacking-at-IMS.webp" alt="Robotic welding in action" class="hero-img" loading="lazy">
+              <div class="stats-overlay">
+                <div><span class="stat-number" data-target="90">0</span>%<br><span class="stat-label">On-Time Delivery</span></div>
+                <div><span class="stat-number" data-target="48">0</span>-hr<br><span class="stat-label">Quote Turnaround</span></div>
+                <div><span class="stat-number" data-target="30">0</span>+<br><span class="stat-label">Years Experience</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pain-points">
+      <div class="wrap">
+        <div class="section-header">
+          <h2>Still Dealing With These Manufacturing Headaches?</h2>
+          <p>Robotic welding solves the problems that keep you up at night, turning your biggest challenges into competitive advantages.</p>
+        </div>
+        <div class="pain-grid">
+          <div class="pain-card">
+            <div class="pain-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg></div>
+            <div>
+              <h3>Inconsistent Weld Quality</h3>
+              <p>Manual variations lead to costly rework and damage your reputation.</p>
+            </div>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7a4 4 0 11-8 0 4 4 0 018 0zM9 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></div>
+            <div>
+              <h3>Skilled Welder Shortage</h3>
+              <p>The talent pool is shrinking, making it impossible to scale your team.</p>
+            </div>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div>
+              <h3>Production Bottlenecks</h3>
+              <p>Losing bids and delaying shipments because manual welding is too slow.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="roi-calculator" id="calculator">
+      <div class="wrap">
+        <div class="section-header">
+          <h2>Calculate Your Potential Savings</h2>
+          <p style="color: rgba(255,255,255,0.8);">Use our simple calculator to estimate your annual savings when you switch to AMF's robotic welding. See your ROI in real-time.</p>
+        </div>
+        <div class="calculator-container">
+          <div class="calculator-grid">
+            <div class="calculator-inputs">
+              <div class="slider-group">
+                <div class="slider-label"><span>Monthly Part Volume</span><span id="volume-value">500</span></div>
+                <input type="range" class="slider" id="volume-slider" min="100" max="5000" value="500" step="100">
+              </div>
+              <div class="slider-group">
+                <div class="slider-label"><span>Current Labor Cost/Hour</span><span id="labor-value">$45</span></div>
+                <input type="range" class="slider" id="labor-slider" min="25" max="100" value="45" step="5">
+              </div>
+            </div>
+            <div class="roi-results">
+              <h3>Your Estimated Annual Savings</h3>
+              <div class="savings-amount" id="savings">$108,000</div>
+              <a href="#form" class="btn btn-accent" style="margin-top: 10px;">Get a Detailed Analysis</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="wrap">
+        <div class="section-header">
+          <h2>The AMF Advantage</h2>
+          <p>We've invested in the right technology to deliver speed, quality, and flexibility—giving you a powerful competitive edge.</p>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">⚡️</div>
+            <h3>4x Faster Production</h3>
+            <p>Achieve consistent weld speeds of ~90 inches/minute. No breaks, no slowdowns, just pure throughput.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">⏱️</div>
+            <h3>10-Minute Programming</h3>
+            <p>Our hand-guided cobots learn new parts in minutes, making changeovers for high-mix runs fast and simple.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🎯</div>
+            <h3>Flawless Quality</h3>
+            <p>Eliminate human error. Get perfect, repeatable welds on every single part, backed by our ISO 9001:2015 system.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">📦</div>
+            <h3>Small-Batch Ready</h3>
+            <p>Our process is efficient for lots as small as 30-50 pieces, giving you flexibility without sacrificing quality.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">📈</div>
+            <h3>Scale Without Hiring</h3>
+            <p>Instantly increase your production capacity without the headache and cost of finding skilled welders.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🤝</div>
+            <h3>Full-Service Partner</h3>
+            <p>From laser cutting and forming to welding and finishing, we deliver complete parts ready for your line.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="wrap">
+        <div class="section-header">
+          <h2>Trusted by Leading Manufacturers</h2>
+        </div>
+        <div class="ticker-wrapper">
+          <div class="ticker">
+            <div class="testimonial-card"><p>"AMF cut our production time by 60% and eliminated our quality issues. A true game-changer."</p><div class="testimonial-author"><div class="author-avatar">JM</div><div><div class="author-name">John Mitchell</div><div class="author-company">TechCorp Manufacturing</div></div></div></div>
+            <div class="testimonial-card"><p>"Finally found a partner for our high-mix, low-volume needs. The 10-minute changeover is real."</p><div class="testimonial-author"><div class="author-avatar">SC</div><div><div class="author-name">Sarah Chen</div><div class="author-company">Precision Parts Inc</div></div></div></div>
+            <div class="testimonial-card"><p>"We saved over $150,000 in the first year alone. The ROI was faster than we ever projected."</p><div class="testimonial-author"><div class="author-avatar">RD</div><div><div class="author-name">Robert Davis</div><div class="author-company">Industrial Solutions LLC</div></div></div></div>
+            <div class="testimonial-card"><p>"AMF cut our production time by 60% and eliminated our quality issues. A true game-changer."</p><div class="testimonial-author"><div class="author-avatar">JM</div><div><div class="author-name">John Mitchell</div><div class="author-company">TechCorp Manufacturing</div></div></div></div>
+            <div class="testimonial-card"><p>"Finally found a partner for our high-mix, low-volume needs. The 10-minute changeover is real."</p><div class="testimonial-author"><div class="author-avatar">SC</div><div><div class="author-name">Sarah Chen</div><div class="author-company">Precision Parts Inc</div></div></div></div>
+            <div class="testimonial-card"><p>"We saved over $150,000 in the first year alone. The ROI was faster than we ever projected."</p><div class="testimonial-author"><div class="author-avatar">RD</div><div><div class="author-name">Robert Davis</div><div class="author-company">Industrial Solutions LLC</div></div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="form">
+      <div class="wrap">
+        <div class="form-grid">
+          <div class="form-left">
+            <h2>Get Your Free Automation Assessment</h2>
+            <p style="font-size: 18px; color: var(--muted); margin-bottom: 30px;">See exactly how robotic welding can be applied to your parts. Upload your drawings and our team will provide a detailed analysis and quote within 48 hours.</p>
+            <ul class="form-benefits">
+              <li><svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><span>Detailed ROI analysis specific to your parts.</span></li>
+              <li><svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><span>Fixturing strategy and production timeline.</span></li>
+              <li><svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg><span>No obligations, no high-pressure sales tactics.</span></li>
+            </ul>
+          </div>
+          <div class="form-wrapper">
+            <div class="progress-bar">
+              <div class="progress-line"></div>
+              <div class="progress-step"><div class="step-circle active">1</div><span class="step-label">Contact</span></div>
+              <div class="progress-step"><div class="step-circle">2</div><span class="step-label">Project</span></div>
+            </div>
+            <form id="assessment-form">
+              <div class="form-step active" data-step="1">
+                <div class="form-row">
+                  <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name" required></div>
+                  <div class="form-group"><label for="company">Company *</label><input type="text" id="company" name="company" required></div>
+                </div>
+                <div class="form-group"><label for="email">Work Email *</label><input type="email" id="email" name="email" required></div>
+                <div class="form-navigation"><div></div><button type="button" class="btn btn-accent" id="next-btn">Next Step</button></div>
+              </div>
+              <div class="form-step" data-step="2">
+                <div class="form-row">
+                  <div class="form-group"><label for="qty">Lot Size</label><select id="qty" name="qty"><option>30–50 pcs</option><option>51–200 pcs</option><option>201–500 pcs</option><option>500+ pcs</option></select></div>
+                  <div class="form-group"><label for="material">Material</label><select id="material" name="material"><option>Carbon Steel</option><option>Stainless</option><option>Aluminum</option></select></div>
+                </div>
+                <div class="form-group"><label for="files">Upload Drawings (STEP, PDF, DXF)</label><input type="file" id="files" name="files" multiple></div>
+                <div class="form-navigation">
+                  <button type="button" class="btn btn-secondary" id="prev-btn">Previous</button>
+                  <button type="submit" class="btn btn-accent">Get My Assessment</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="wrap">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <details><summary>What part sizes are ideal?</summary><div class="faq-answer">Our cobot cells excel with small-to-mid sized weldments that can be fixtured quickly. Share your print, and we’ll confirm the fit and our proposed fixturing approach.</div></details>
+        <details><summary>How do you handle high-mix changeovers so fast?</summary><div class="faq-answer">The combination of teach-by-hand programming (~10 minutes typical) and modular fixtures allows us to swap between SKUs rapidly without sacrificing quality or repeatability.</div></details>
+        <details><summary>Do you certify welds?</summary><div class="faq-answer">Absolutely. AMF operates under an ISO 9001:2015 quality management system. We can provide documented WPS/WPQR as required by your project.</div></details>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="wrap">
+      <div class="footer-bottom">
+        <p>© <span id="yr"></span> All Metals Fabrication. All Rights Reserved. ISO 9001:2015 Certified.</p>
+        <p style="margin-top: 8px;">
+          <a href="tel:+18013175647" style="color:white; text-decoration: none;">(801) 317-5647</a> · 
+          <a href="mailto:sales@allmetalsfab.com" style="color:white; text-decoration: none;">sales@allmetalsfab.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What part sizes are ideal?","acceptedAnswer":{"@type":"Answer","text":"Our cobot cells excel with small-to-mid sized weldments that can be fixtured quickly. Share your print, and we’ll confirm the fit and our proposed fixturing approach."}},
+    {"@type":"Question","name":"How do you handle high-mix changeovers so fast?","acceptedAnswer":{"@type":"Answer","text":"The combination of teach-by-hand programming (~10 minutes typical) and modular fixtures allows us to swap between SKUs rapidly without sacrificing quality or repeatability."}},
+    {"@type":"Question","name":"Do you certify welds?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. AMF operates under an ISO 9001:2015 quality management system. We can provide documented WPS/WPQR as required by your project."}}
+  ]}
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set current year in footer
+      document.getElementById('yr').textContent = new Date().getFullYear();
+
+      // Animated Counters
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.getAttribute('data-target'));
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              el.textContent = Math.floor(current);
+            }, 30);
+            observer.unobserve(el);
+          }
+        });
+      });
+      document.querySelectorAll('.stat-number').forEach(el => observer.observe(el));
+
+      // ROI Calculator
+      const volumeSlider = document.getElementById('volume-slider');
+      const laborSlider = document.getElementById('labor-slider');
+      const savingsDisplay = document.getElementById('savings');
+      
+      function updateCalculator() {
+        const volume = parseInt(volumeSlider.value);
+        const labor = parseInt(laborSlider.value);
+        document.getElementById('volume-value').textContent = volume;
+        document.getElementById('labor-value').textContent = `$${labor}`;
+        // Simplified formula: assumes 50% time savings and 1 hour avg per part for calculation simplicity
+        const annualSavings = Math.floor(volume * labor * 0.5 * 12);
+        savingsDisplay.textContent = `$${annualSavings.toLocaleString()}`;
+      }
+      volumeSlider.addEventListener('input', updateCalculator);
+      laborSlider.addEventListener('input', updateCalculator);
+      updateCalculator(); // Initial calculation
+
+      // Multi-step Form
+      let currentStep = 1;
+      const totalSteps = 2;
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      const progressLine = document.querySelector('.progress-line');
+
+      function showStep(step) {
+        document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+        document.querySelector(`[data-step="${step}"]`).classList.add('active');
+        document.querySelectorAll('.step-circle').forEach((c, i) => c.classList.toggle('active', i < step));
+        progressLine.style.width = `${((step - 1) / (totalSteps - 1)) * 100}%`;
+      }
+
+      nextBtn.addEventListener('click', () => {
+        const currentFormStep = document.querySelector('.form-step.active');
+        const inputs = currentFormStep.querySelectorAll('input[required]');
+        let isValid = true;
+        inputs.forEach(input => {
+            if (!input.checkValidity()) {
+                isValid = false;
+                input.reportValidity();
+            }
+        });
+        if (isValid && currentStep < totalSteps) {
+          currentStep++;
+          showStep(currentStep);
+        }
+      });
+      prevBtn.addEventListener('click', () => {
+        if (currentStep > 1) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      });
+      document.getElementById('assessment-form').addEventListener('submit', e => {
+        e.preventDefault();
+        alert('Thank you! Your assessment request has been submitted.');
+      });
+    });
+  </script>
+</body>
+</html>
