@@ -117,6 +117,12 @@
     .benefit-icon { font-size: 32px; line-height: 1; margin-bottom: 16px; }
     .benefit-card h3 { font-size: 20px; color: var(--amf-navy); margin-bottom: 12px; }
 
+    /* --- Gallery --- */
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .gallery figure { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
+    .gallery img:hover { transform: scale(1.05); }
+    
     /* --- Testimonials --- */
     .testimonials { background: var(--bg-light); overflow: hidden; }
     .ticker-wrapper { position: relative; max-width: 100%; margin: 0 auto; }
@@ -164,7 +170,7 @@
     
     /* --- Responsive --- */
     @media (max-width: 960px) {
-      .hero-grid, .calculator-grid, .form-grid { grid-template-columns: 1fr; }
+      .hero-grid, .calculator-grid, .form-grid, .gallery { grid-template-columns: 1fr; }
       .hero-grid { text-align: center; }
       .hero-subtitle { margin: 20px auto 30px; }
       .trust-indicators, .cta-group { justify-content: center; }
@@ -174,6 +180,7 @@
     @media (max-width: 560px) {
       .stats-overlay, .form-row { grid-template-columns: 1fr; }
       .stats-overlay { gap: 16px; }
+      .gallery { grid-template-columns: 1fr; }
       h1 { font-size: 28px; }
       h2 { font-size: 24px; }
     }
@@ -325,6 +332,19 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <div class="section-header">
+                <h2>Robotic Welding — In Action</h2>
+            </div>
+            <div class="gallery">
+                <figure><img src="https://www.allmetalsfab.com/wp-content/uploads/welding-cobot-in-action-hirebotics.webp" alt="Cobot welding table — wide view" loading="lazy"></figure>
+                <figure><img src="https://www.allmetalsfab.com/wp-content/uploads/Athena-manufacturing-welding-cobots-in-action-scaled.webp" alt="Cobot welding with sparks — close" loading="lazy"></figure>
+                <figure><img src="https://www.allmetalsfab.com/wp-content/uploads/cobot-welder-beacon-advanta-1.png" alt="Cobot welder beacon advanta" loading="lazy"></figure>
+            </div>
+        </div>
     </section>
 
     <section class="testimonials">
