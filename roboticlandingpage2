@@ -1,0 +1,1563 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Cut Production Time by 50% | Robotic Welding | All Metals Fabrication</title>
+  <meta name="description" content="No minimum orders. Perfect quality on every part. From prototype to production. See your ROI in 48 hours. ISO 9001:2015 certified robotic welding."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --amf-navy: #1f3d91;
+      --amf-navy-dark: #0f2858;
+      --amf-orange: #f59e0b;
+      --amf-orange-dark: #dc8806;
+      --amf-green: #10b981;
+      --ink: #0c1222;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+      --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --hero-gradient: linear-gradient(180deg, rgba(31,61,145,0.03) 0%, rgba(245,158,11,0.02) 100%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--ink);
+      line-height: 1.6;
+      background: var(--bg);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.2;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(-100%); }
+      to { transform: translateX(0); }
+    }
+
+    @keyframes countUp {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .fade-in {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .logo img {
+      height: 36px;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .trust-badges {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .iso-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .phone-cta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: var(--amf-orange);
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+
+    .phone-cta:hover {
+      background: var(--amf-orange-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 120px 20px 60px;
+      background: var(--hero-gradient);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(245,158,11,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-left h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 900;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, var(--amf-navy), var(--amf-navy-dark));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      color: var(--muted);
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .trust-indicators {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .trust-item svg {
+      color: var(--amf-green);
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 16px 32px;
+      border-radius: 30px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      font-size: 16px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--amf-orange), var(--amf-orange-dark));
+      color: white;
+      box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--amf-navy);
+      border: 2px solid var(--amf-navy);
+    }
+
+    .btn-secondary:hover {
+      background: var(--amf-navy);
+      color: white;
+    }
+
+    .urgency-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: rgba(239, 68, 68, 0.1);
+      color: #dc2626;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .video-container {
+      position: relative;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .video-container video,
+    .video-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .stats-overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--amf-navy);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Pain Points Section */
+    .pain-points {
+      padding: 80px 20px;
+      background: #f8fafc;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: var(--amf-navy);
+    }
+
+    .pain-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .pain-item {
+      background: white;
+      padding: 24px;
+      border-radius: 16px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .pain-item:hover {
+      border-color: var(--amf-orange);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .pain-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      background: rgba(239, 68, 68, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #dc2626;
+    }
+
+    .pain-content h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .pain-content p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .solution-cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    /* ROI Calculator */
+    .roi-calculator {
+      padding: 80px 20px;
+      background: linear-gradient(135deg, var(--amf-navy), var(--amf-navy-dark));
+      color: white;
+    }
+
+    .calculator-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .calculator-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .slider-group {
+      margin-bottom: 30px;
+    }
+
+    .slider-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .slider {
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: rgba(255, 255, 255, 0.2);
+      outline: none;
+      -webkit-appearance: none;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--amf-orange);
+      cursor: pointer;
+    }
+
+    .roi-results {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .savings-amount {
+      font-size: 48px;
+      font-weight: 900;
+      color: var(--amf-orange);
+      margin: 20px 0;
+    }
+
+    /* Benefits Grid */
+    .benefits {
+      padding: 80px 20px;
+    }
+
+    .benefits-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .benefit-card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .benefit-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--amf-orange), var(--amf-navy));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .benefit-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .benefit-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 20px;
+      background: linear-gradient(135deg, var(--amf-orange), var(--amf-orange-dark));
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+    }
+
+    .benefit-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--amf-navy);
+    }
+
+    .benefit-description {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Testimonials Ticker */
+    .testimonials {
+      padding: 60px 20px;
+      background: #f8fafc;
+      overflow: hidden;
+    }
+
+    .ticker-wrapper {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .ticker {
+      display: flex;
+      gap: 30px;
+      animation: scroll 30s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .testimonial-card {
+      flex-shrink: 0;
+      width: 400px;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+    }
+
+    .testimonial-text {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: var(--ink);
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--amf-navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+    }
+
+    .author-info {
+      flex: 1;
+    }
+
+    .author-name {
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .author-company {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* Form Section */
+    .form-section {
+      padding: 80px 20px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
+
+    .form-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .form-left h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--amf-navy);
+      margin-bottom: 20px;
+    }
+
+    .form-benefits {
+      list-style: none;
+      margin: 30px 0;
+    }
+
+    .form-benefits li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 16px;
+      color: var(--ink);
+    }
+
+    .form-benefits svg {
+      flex-shrink: 0;
+      color: var(--amf-green);
+      margin-top: 4px;
+    }
+
+    .form-wrapper {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--border);
+    }
+
+    .progress-bar {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .progress-bar::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--border);
+      z-index: 0;
+    }
+
+    .progress-step {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+    }
+
+    .step-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: white;
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .step-circle.active {
+      background: var(--amf-orange);
+      border-color: var(--amf-orange);
+      color: white;
+    }
+
+    .step-label {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .form-step {
+      display: none;
+    }
+
+    .form-step.active {
+      display: block;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--amf-orange);
+      box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 60px 20px 30px;
+      background: var(--amf-navy);
+      color: white;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand h3 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .footer-column h4 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      opacity: 0.8;
+    }
+
+    .footer-column a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 4px 0;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      opacity: 1;
+    }
+
+    .footer-bottom {
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      opacity: 0.6;
+    }
+
+    /* Floating Elements */
+    .floating-calculator {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--amf-orange);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+
+    .floating-calculator:hover {
+      transform: scale(1.05);
+    }
+
+    /* Live Chat Widget Placeholder */
+    .chat-widget {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background: var(--amf-navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      z-index: 998;
+      transition: all 0.3s ease;
+    }
+
+    .chat-widget:hover {
+      transform: scale(1.1);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .hero-grid,
+      .calculator-grid,
+      .benefits-grid,
+      .form-container,
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .pain-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-overlay {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .hero {
+        padding: 100px 20px 40px;
+      }
+
+      h1 {
+        font-size: 32px !important;
+      }
+
+      .nav-right {
+        display: none;
+      }
+
+      .floating-calculator {
+        bottom: 10px;
+        right: 10px;
+        padding: 10px 16px;
+        font-size: 14px;
+      }
+
+      .chat-widget {
+        bottom: 70px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="nav">
+      <a href="https://www.allmetalsfab.com" class="logo">
+        <img src="https://www.allmetalsfab.com/wp-content/uploads/logo-1.png" alt="AMF">
+        <span>ALL METALS FABRICATION</span>
+      </a>
+      <div class="nav-right">
+        <div class="trust-badges">
+          <div class="iso-badge">
+            <img src="https://www.allmetalsfab.com/wp-content/uploads/ISO.png" alt="ISO" style="height: 20px;">
+            <span>ISO 9001:2015</span>
+          </div>
+        </div>
+        <a href="tel:+18013175647" class="phone-cta">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          (801) 317-5647
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-grid">
+        <div class="hero-left fade-in">
+          <h1>Cut Production Time by 50% with Precision Robotic Welding</h1>
+          <p class="hero-subtitle">No minimum orders. Perfect quality on every part. From prototype to production—ideal for job shops and OEMs.</p>
+          
+          <div class="trust-indicators">
+            <div class="trust-item">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+              <span>Trusted by 500+ Manufacturers</span>
+            </div>
+            <div class="trust-item">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+              <span>4× Faster Production</span>
+            </div>
+            <div class="trust-item">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+              <span>10-Minute Setup</span>
+            </div>
+          </div>
+
+          <div class="cta-group">
+            <a href="#calculator" class="btn btn-primary">
+              See Your ROI in 48 Hours
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+            </a>
+            <a href="#form" class="btn btn-secondary">
+              Get Free Assessment
+            </a>
+          </div>
+
+          <div class="urgency-badge">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"/>
+            </svg>
+            Only 3 production slots available this month
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="video-container">
+            <img src="https://www.allmetalsfab.com/wp-content/uploads/cobot-welder-tacking-at-IMS.webp" alt="Robotic Welding in Action">
+            <div class="stats-overlay">
+              <div class="stat-item">
+                <span class="stat-number" data-target="90">0</span>
+                <span class="stat-label">% On-Time</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="3">0</span>
+                <span class="stat-label">Day Quotes</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="30">0</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pain Points Section -->
+  <section class="pain-points">
+    <div class="section-header">
+      <h2>Still Dealing With These Manufacturing Headaches?</h2>
+      <p style="color: var(--muted); font-size: 18px;">We solve the problems that keep you up at night</p>
+    </div>
+    
+    <div class="pain-grid">
+      <div class="pain-item">
+        <div class="pain-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </div>
+        <div class="pain-content">
+          <h3>Inconsistent Weld Quality</h3>
+          <p>Manual welding variations costing you clients and reputation</p>
+        </div>
+      </div>
+      
+      <div class="pain-item">
+        <div class="pain-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </div>
+        <div class="pain-content">
+          <h3>Skilled Welders Impossible to Find</h3>
+          <p>The talent shortage is real and getting worse every year</p>
+        </div>
+      </div>
+      
+      <div class="pain-item">
+        <div class="pain-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </div>
+        <div class="pain-content">
+          <h3>Competitors Beating You on Time</h3>
+          <p>Losing bids because you can't match their delivery speeds</p>
+        </div>
+      </div>
+      
+      <div class="pain-item">
+        <div class="pain-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </div>
+        <div class="pain-content">
+          <h3>Manual Welding Eating Profits</h3>
+          <p>Labor costs climbing while margins keep shrinking</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="solution-cta">
+      <a href="#benefits" class="btn btn-primary">See How We Solve These Problems</a>
+    </div>
+  </section>
+
+  <!-- ROI Calculator -->
+  <section class="roi-calculator" id="calculator">
+    <div class="section-header" style="color: white;">
+      <h2 style="color: white;">Calculate Your Savings</h2>
+      <p style="color: rgba(255,255,255,0.8); font-size: 18px;">See your potential ROI in real-time</p>
+    </div>
+    
+    <div class="calculator-container">
+      <div class="calculator-grid">
+        <div class="calculator-inputs">
+          <div class="slider-group">
+            <div class="slider-label">
+              <span>Monthly Part Volume</span>
+              <span id="volume-value">500</span>
+            </div>
+            <input type="range" class="slider" id="volume-slider" min="100" max="5000" value="500" step="100">
+          </div>
+          
+          <div class="slider-group">
+            <div class="slider-label">
+              <span>Average Part Complexity</span>
+              <span id="complexity-value">Medium</span>
+            </div>
+            <input type="range" class="slider" id="complexity-slider" min="1" max="3" value="2" step="1">
+          </div>
+          
+          <div class="slider-group">
+            <div class="slider-label">
+              <span>Current Labor Cost/Hour</span>
+              <span id="labor-value">$45</span>
+            </div>
+            <input type="range" class="slider" id="labor-slider" min="25" max="100" value="45" step="5">
+          </div>
+        </div>
+        
+        <div class="roi-results">
+          <h3 style="color: white; margin-bottom: 10px;">Your Annual Savings</h3>
+          <div class="savings-amount" id="savings">$156,000</div>
+          <p style="color: rgba(255,255,255,0.8);">ROI achieved in <strong>4.2 months</strong></p>
+          <a href="#form" class="btn btn-primary" style="margin-top: 20px;">Get Detailed Analysis</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Grid -->
+  <section class="benefits" id="benefits">
+    <div class="section-header">
+      <h2>Why Leading Manufacturers Choose AMF</h2>
+    </div>
+    
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">⚡</div>
+        <h3 class="benefit-title">4× Faster Production</h3>
+        <p class="benefit-description">Consistent 90 inches/minute weld speeds. No breaks, no slowdowns, just pure productivity.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">🎯</div>
+        <h3 class="benefit-title">Perfect Quality Every Time</h3>
+        <p class="benefit-description">ISO 9001:2015 certified processes. Eliminate rework and warranty claims.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">⏱️</div>
+        <h3 class="benefit-title">10-Minute Changeovers</h3>
+        <p class="benefit-description">Hand-guided programming means switching between parts faster than ever.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">📦</div>
+        <h3 class="benefit-title">No Minimum Orders</h3>
+        <p class="benefit-description">Efficient for batches as small as 30 pieces. Perfect for prototypes and short runs.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">🔧</div>
+        <h3 class="benefit-title">Full-Service Fabrication</h3>
+        <p class="benefit-description">Cutting, forming, welding, finishing—all under one roof for seamless production.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">🚀</div>
+        <h3 class="benefit-title">Scale Without Hiring</h3>
+        <p class="benefit-description">Grow your capacity without the headache of finding skilled welders.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Ticker -->
+  <section class="testimonials">
+    <div class="section-header">
+      <h2>What Our Clients Are Saying</h2>
+    </div>
+    
+    <div class="ticker-wrapper">
+      <div class="ticker">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"AMF cut our production time by 60% and eliminated all our quality issues. Game changer for our operation."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JM</div>
+            <div class="author-info">
+              <div class="author-name">John Mitchell</div>
+              <div class="author-company">TechCorp Manufacturing</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Finally found a partner who can handle our high-mix, low-volume needs. The 10-minute changeover is real."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SC</div>
+            <div class="author-info">
+              <div class="author-name">Sarah Chen</div>
+              <div class="author-company">Precision Parts Inc</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <p class="testimonial-text">"We saved $180,000 in the first year alone. ROI happened faster than projected."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RD</div>
+            <div class="author-info">
+              <div class="author-name">Robert Davis</div>
+              <div class="author-company">Industrial Solutions LLC</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Duplicate for continuous scroll -->
+        <div class="testimonial-card">
+          <p class="testimonial-text">"AMF cut our production time by 60% and eliminated all our quality issues. Game changer for our operation."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JM</div>
+            <div class="author-info">
+              <div class="author-name">John Mitchell</div>
+              <div class="author-company">TechCorp Manufacturing</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Finally found a partner who can handle our high-mix, low-volume needs. The 10-minute changeover is real."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SC</div>
+            <div class="author-info">
+              <div class="author-name">Sarah Chen</div>
+              <div class="author-company">Precision Parts Inc</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="form-section" id="form">
+    <div class="form-container">
+      <div class="form-left">
+        <h2>Get Your Free Automation Assessment</h2>
+        <p style="font-size: 18px; color: var(--muted); margin-bottom: 30px;">
+          See exactly how much time and money you'll save. Results in 48 hours.
+        </p>
+        
+        <ul class="form-benefits">
+          <li>
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+            </svg>
+            <span>Detailed ROI analysis specific to your parts</span>
+          </li>
+          <li>
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+            </svg>
+            <span>Sample part evaluation (send us your files)</span>
+          </li>
+          <li>
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+            </svg>
+            <span>Production timeline and capacity planning</span>
+          </li>
+          <li>
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+            </svg>
+            <span>No obligations, no high-pressure sales</span>
+          </li>
+        </ul>
+        
+        <div style="padding: 20px; background: rgba(245,158,11,0.1); border-radius: 12px; margin-top: 30px;">
+          <p style="font-weight: 600; color: var(--amf-orange);">🎁 Limited Time Offer</p>
+          <p style="margin-top: 8px;">First 10 assessments this month include a free pilot run of your most challenging part.</p>
+        </div>
+      </div>
+      
+      <div class="form-wrapper">
+        <div class="progress-bar">
+          <div class="progress-step">
+            <div class="step-circle active">1</div>
+            <span class="step-label">Contact</span>
+          </div>
+          <div class="progress-step">
+            <div class="step-circle">2</div>
+            <span class="step-label">Project</span>
+          </div>
+          <div class="progress-step">
+            <div class="step-circle">3</div>
+            <span class="step-label">Details</span>
+          </div>
+        </div>
+        
+        <form id="assessment-form">
+          <!-- Step 1: Contact -->
+          <div class="form-step active" data-step="1">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" name="first_name" required>
+              </div>
+              <div class="form-group">
+                <label>Last Name *</label>
+                <input type="text" name="last_name" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Work Email *</label>
+              <input type="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" name="phone">
+            </div>
+            
+            <div class="form-group">
+              <label>Company *</label>
+              <input type="text" name="company" required>
+            </div>
+          </div>
+          
+          <!-- Step 2: Project -->
+          <div class="form-step" data-step="2">
+            <div class="form-group">
+              <label>Monthly Part Volume *</label>
+              <select name="volume" required>
+                <option value="">Select Volume</option>
+                <option>30-100 parts</option>
+                <option>100-500 parts</option>
+                <option>500-1000 parts</option>
+                <option>1000+ parts</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>Primary Material *</label>
+              <select name="material" required>
+                <option value="">Select Material</option>
+                <option>Carbon Steel</option>
+                <option>Stainless Steel</option>
+                <option>Aluminum</option>
+                <option>Mixed Materials</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>Timeline *</label>
+              <select name="timeline" required>
+                <option value="">When do you need this?</option>
+                <option>ASAP - Rush</option>
+                <option>Within 2 weeks</option>
+                <option>Within 1 month</option>
+                <option>Planning for future</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Step 3: Details -->
+          <div class="form-step" data-step="3">
+            <div class="form-group">
+              <label>Tell us about your project</label>
+              <textarea name="details" rows="4" placeholder="Part description, current challenges, specific requirements..."></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>Upload Files (Optional)</label>
+              <input type="file" name="files" multiple accept=".pdf,.step,.stp,.igs,.dxf,.dwg">
+              <p style="font-size: 14px; color: var(--muted); margin-top: 8px;">
+                Upload drawings, CAD files, or specifications
+              </p>
+            </div>
+            
+            <div class="form-group">
+              <label style="display: flex; align-items: flex-start; gap: 8px; cursor: pointer;">
+                <input type="checkbox" required style="margin-top: 4px; width: auto;">
+                <span style="font-weight: 400; font-size: 14px;">
+                  I agree to receive communication about this assessment and AMF services
+                </span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-navigation">
+            <button type="button" class="btn btn-secondary" id="prev-btn" style="display: none;">Previous</button>
+            <button type="button" class="btn btn-primary" id="next-btn">Next Step</button>
+            <button type="submit" class="btn btn-primary" id="submit-btn" style="display: none;">Get My Assessment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>ALL METALS FABRICATION</h3>
+        <p>Your trusted partner for precision robotic welding and complete metal fabrication solutions.</p>
+        <div style="margin-top: 20px;">
+          <p>📍 Utah, USA</p>
+          <p>📞 (801) 317-5647</p>
+          <p>✉️ sales@allmetalsfab.com</p>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Services</h4>
+        <a href="#">Robotic Welding</a>
+        <a href="#">Laser Cutting</a>
+        <a href="#">CNC Forming</a>
+        <a href="#">Metal Assembly</a>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Company</h4>
+        <a href="#">About AMF</a>
+        <a href="#">ISO Certification</a>
+        <a href="#">Case Studies</a>
+        <a href="#">Careers</a>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <a href="#">ROI Calculator</a>
+        <a href="#">Design Guide</a>
+        <a href="#">Material Specs</a>
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 All Metals Fabrication. All rights reserved. | ISO 9001:2015 Certified</p>
+    </div>
+  </footer>
+
+  <!-- Floating Elements -->
+  <div class="floating-calculator" onclick="document.getElementById('calculator').scrollIntoView({behavior: 'smooth'})">
+    💰 Calculate Savings
+  </div>
+  
+  <div class="chat-widget">
+    <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"/>
+      <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"/>
+    </svg>
+  </div>
+
+  <script>
+    // Counter Animation
+    function animateCounter(element, target) {
+      let current = 0;
+      const increment = target / 50;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        element.textContent = Math.floor(current);
+      }, 30);
+    }
+
+    // Initialize counters when visible
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = parseInt(entry.target.getAttribute('data-target'));
+          animateCounter(entry.target, target);
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    document.querySelectorAll('.stat-number').forEach(el => {
+      observer.observe(el);
+    });
+
+    // ROI Calculator
+    const volumeSlider = document.getElementById('volume-slider');
+    const complexitySlider = document.getElementById('complexity-slider');
+    const laborSlider = document.getElementById('labor-slider');
+    const savingsDisplay = document.getElementById('savings');
+
+    function updateCalculator() {
+      const volume = parseInt(volumeSlider.value);
+      const complexity = parseInt(complexitySlider.value);
+      const labor = parseInt(laborSlider.value);
+      
+      // Update display values
+      document.getElementById('volume-value').textContent = volume;
+      document.getElementById('complexity-value').textContent = 
+        complexity === 1 ? 'Simple' : complexity === 2 ? 'Medium' : 'Complex';
+      document.getElementById('labor-value').textContent = `$${labor}`;
+      
+      // Calculate savings (simplified formula)
+      const baseSavings = volume * labor * 0.5;
+      const complexityMultiplier = 1 + (complexity - 1) * 0.3;
+      const annualSavings = Math.floor(baseSavings * complexityMultiplier * 12);
+      
+      savingsDisplay.textContent = `$${annualSavings.toLocaleString()}`;
+    }
+
+    volumeSlider.addEventListener('input', updateCalculator);
+    complexitySlider.addEventListener('input', updateCalculator);
+    laborSlider.addEventListener('input', updateCalculator);
+
+    // Multi-step Form
+    let currentStep = 1;
+    const totalSteps = 3;
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const submitBtn = document.getElementById('submit-btn');
+
+    function showStep(step) {
+      document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+      document.querySelector(`[data-step="${step}"]`).classList.add('active');
+      
+      document.querySelectorAll('.step-circle').forEach((circle, index) => {
+        if (index < step) {
+          circle.classList.add('active');
+        } else {
+          circle.classList.remove('active');
+        }
+      });
+      
+      prevBtn.style.display = step === 1 ? 'none' : 'block';
+      nextBtn.style.display = step === totalSteps ? 'none' : 'block';
+      submitBtn.style.display = step === totalSteps ? 'block' : 'none';
+    }
+
+    nextBtn.addEventListener('click', () => {
+      if (currentStep < totalSteps) {
+        currentStep++;
+        showStep(currentStep);
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    });
+
+    document.getElementById('assessment-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you! Your assessment request has been received. We\'ll contact you within 48 hours.');
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Header scroll effect
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      const header = document.querySelector('header');
+      
+      if (currentScroll > 100) {
+        header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+      
+      lastScroll = currentScroll;
+    });
+  </script>
+</body>
+</html>
